@@ -1,0 +1,25 @@
+{
+  "name": "android-playwright-video-test",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "playwright test --project=unit",
+    "typecheck": "tsc --noEmit",
+    "test:unit": "playwright test --project=unit",
+    "test:mobile": "playwright test --project=mobile --workers=1",
+    "test:mobile:debug": "PWDEBUG=1 playwright test --project=mobile --workers=1",
+    "test:android": "playwright test --project=android --workers=1",
+    "test:android:debug": "PWDEBUG=1 playwright test --project=android --workers=1",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "@types/node": "22.18.12",
+    "playwright": "1.56.1",
+    "typescript": "5.9.3"
+  }
+}

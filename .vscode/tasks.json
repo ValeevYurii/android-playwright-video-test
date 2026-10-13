@@ -1,0 +1,62 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Playwright: Android device",
+      "type": "shell",
+      "command": "source \"${env:HOME}/.nvm/nvm.sh\" && nvm use --silent && node",
+      "args": [
+        "${workspaceFolder}/node_modules/@playwright/test/cli.js",
+        "test",
+        "--project=android",
+        "--workers=1"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: mobile Chrome",
+      "type": "shell",
+      "command": "source \"${env:HOME}/.nvm/nvm.sh\" && nvm use --silent && node",
+      "args": [
+        "${workspaceFolder}/node_modules/@playwright/test/cli.js",
+        "test",
+        "--project=mobile",
+        "--workers=1"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: unit tests",
+      "type": "shell",
+      "command": "source \"${env:HOME}/.nvm/nvm.sh\" && nvm use --silent && node",
+      "args": [
+        "${workspaceFolder}/node_modules/@playwright/test/cli.js",
+        "test",
+        "--project=unit"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "TypeScript: check",
+      "type": "shell",
+      "command": "source \"${env:HOME}/.nvm/nvm.sh\" && nvm use --silent && node",
+      "args": [
+        "${workspaceFolder}/node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$tsc"]
+    }
+  ]
+}
